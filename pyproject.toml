@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "django-telegram-shop"
+version = "0.1.0"
+description = ""
+authors = ["readysloth <readysloth@protonmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.4"
+django-telegram-bot = {git = "git@github.com:readysloth-django/django-telegram-bot.git"}
+
+
+[tool.poetry.group.dev.dependencies]
+behave-django = "^1.4.0"
+mitmmock = {git = "git@github.com:readysloth/mitmmock.git"}
+remote-pdb = "^2.1.0"
+factory-boy = "^3.3.0"
+mimesis = "^16.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
