@@ -7,9 +7,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django = "^5.0.4"
+django = ">4"
 django-telegram-bot = {git = "git@github.com:readysloth-django/django-telegram-bot.git"}
 django-configurations = "^2.5.1"
+dj-shop-cart = "^7.1.1"
 
 
 [tool.poetry.group.dev.dependencies]
