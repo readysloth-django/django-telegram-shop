@@ -39,11 +39,14 @@ class Base(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        'dj_shop_cart',
         'django_telegram_bot',
         # django_telegram_bot dependencies
         'solo',
         'phonenumber_field',
-        'django_object_actions'
+        'django_object_actions',
+        # django_telegram_bot dependencies end
+        'shop'
     ]
 
     MIDDLEWARE = [
