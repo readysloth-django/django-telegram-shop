@@ -11,7 +11,12 @@ class Buyer(User):
     address = models.CharField(_('Address'), max_length=512, null=True)
     position = GeopositionField(_('Geoposition'), null=True)
 
-    spendings = models.DecimalField(_('Spendings'), max_digits=10, decimal_places=2)
+    spendings = models.DecimalField(
+        _('Spendings'),
+        max_digits=10,
+        decimal_places=2,
+        default=0
+    )
     personal_discont = models.PositiveSmallIntegerField(
         _('Personal discount'),
         null=True,
