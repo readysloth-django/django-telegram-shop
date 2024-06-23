@@ -9,7 +9,7 @@ from geoposition.fields import GeopositionField
 class Buyer(User):
     real_full_name = models.CharField(_('Full Name'), max_length=128)
     address = models.CharField(_('Address'), max_length=512, null=True)
-    position = GeopositionField(_('Geoposition'), null=True)
+    position = GeopositionField(_('Geoposition'), default='0,0')
 
     spendings = models.DecimalField(
         _('Spendings'),
