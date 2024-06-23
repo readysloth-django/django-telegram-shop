@@ -17,7 +17,7 @@ class Buyer(User):
         decimal_places=2,
         default=0
     )
-    personal_discont = models.PositiveSmallIntegerField(
+    personal_discount = models.PositiveSmallIntegerField(
         _('Personal discount'),
         null=True,
         validators=[
