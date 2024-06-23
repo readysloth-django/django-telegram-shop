@@ -11,6 +11,8 @@ django = ">4"
 django-telegram-bot = {git = "git@github.com:readysloth-django/django-telegram-bot.git"}
 django-configurations = "^2.5.1"
 dj-shop-cart = "^7.1.1"
+django-geoposition-2 = "^0.4.0"
+pillow = "^10.3.0"
 
 
 [tool.poetry.group.dev.dependencies]

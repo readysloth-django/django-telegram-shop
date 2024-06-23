@@ -40,6 +40,7 @@ class Base(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'dj_shop_cart',
+        'geoposition',
         'django_telegram_bot',
         # django_telegram_bot dependencies
         'solo',
@@ -127,6 +128,9 @@ class Base(Configuration):
     # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
     DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+    # misc
+    GEOPOSITION_BACKEND = 'leaflet'
 
 
 class Test(Base):
