@@ -10,6 +10,7 @@ class SaleVerificationType(models.Model):
     uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     name = models.CharField(_('Name'), max_length=128)
     description = models.TextField(_('Description'))
+    image = models.ImageField(_('Image'), null=True)
 
     class Meta:
         verbose_name = _('Sale verification type')
