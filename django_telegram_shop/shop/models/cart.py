@@ -7,7 +7,7 @@ from .buyer import Buyer
 
 
 class ProductCategory(models.Model):
-    uuid = models.UUIDField(primary_key=True, default=uuid4)
+    uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     name = models.CharField(_('Category Name'), max_length=128, unique=True)
     description = models.CharField(_('Description'), max_length=512, null=True)
 
@@ -20,7 +20,7 @@ class ProductCategory(models.Model):
 
 
 class Product(models.Model):
-    uuid = models.UUIDField(primary_key=True, default=uuid4)
+    uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
 
     category = models.ForeignKey(ProductCategory, on_delete=models.SET_NULL, null=True)
     name = models.CharField(_('Product Name'), max_length=128)
@@ -44,7 +44,7 @@ class Product(models.Model):
 
 
 class Cart(models.Model):
-    uuid = models.UUIDField(primary_key=True, default=uuid4)
+    uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
 
     buyer = models.ForeignKey(Buyer, on_delete=models.CASCADE)
     finished = models.BooleanField(default=False)
