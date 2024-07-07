@@ -16,6 +16,9 @@ class SaleVerificationType(models.Model):
         verbose_name = _('Sale verification type')
         verbose_name_plural = _('Sale verification types')
 
+    def __str__(self):
+        return self.name
+
 
 class SaleVerification(models.Model):
     uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
