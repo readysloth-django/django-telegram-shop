@@ -55,4 +55,4 @@ class Cart(models.Model):
 
     def __str__(self):
         is_finished = _('finished') if self.finished else _('not finished')
-        return f'{is_finished} {self.Meta.verbose_name} {self.buyer}'
+        return f'{is_finished} {self._meta.verbose_name} {self.buyer}'
